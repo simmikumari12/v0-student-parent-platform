@@ -50,13 +50,18 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="fixed top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-sm">
+      <header className="fixed top-0 z-50 w-full border-b border-sky-800/30 bg-sky-900/90 backdrop-blur-sm text-white">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2">
-            <GraduationCap className="h-8 w-8 text-primary" />
+            <GraduationCap className="h-8 w-8 text-white" />
             <span className="text-xl font-bold">EduPath</span>
           </div>
-          <LanguageSelector />
+          <div className="flex items-center gap-3">
+            <Button variant="outline" size="sm" className="hidden sm:inline-flex" onClick={() => router.push("/about") }>
+              About Us
+            </Button>
+            <LanguageSelector />
+          </div>
         </div>
       </header>
 
@@ -91,7 +96,7 @@ export default function LandingPage() {
                 {t("landing.getStarted")}
                 <ArrowRight className="h-4 w-4" />
               </Button>
-              <Button variant="outline" size="lg" className="w-full sm:w-auto">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto" onClick={() => router.push("/about") }>
                 {t("landing.learnMore")}
               </Button>
             </div>

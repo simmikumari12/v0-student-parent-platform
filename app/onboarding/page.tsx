@@ -77,10 +77,14 @@ export default function OnboardingPage() {
       {/* Header */}
       <header className="fixed top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-sm">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-2">
+          <Button
+            variant="ghost"
+            onClick={() => router.push("/")}
+            className="flex items-center gap-2 p-0 hover:bg-transparent"
+          >
             <GraduationCap className="h-8 w-8 text-primary" />
             <span className="text-xl font-bold">EduPath</span>
-          </div>
+          </Button>
           <LanguageSelector />
         </div>
       </header>
